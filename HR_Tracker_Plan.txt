@@ -1,0 +1,34 @@
+From User Story #1:
+
+// Store candidates
+    // Store name
+    // ... date last contacted
+    // ... platform
+
+// Track candidates
+    // Compare each candidates' last date of contact to today's date
+    // If today's date is more than 3 days ahead of last contact:
+        // Store candidate into a contact list
+            // Store name
+            // ...platform
+
+// Provide candidates
+    // Provide a list to HR of candidates that need to be contacted
+        // Show name
+        // ... platform
+
+// Update candidates
+    // For each candidate HR contacted, update their date of last contact to
+        today's date
+
+From User Story #2:
+
+// Remove candidate
+    // Search candidate by name and platform
+        // If candidate is found, remove candidate from database
+
+From User Story #3:
+
+// Add candidate
+    // If the candidate is not in the list, add their name, date, and platform 
+        to the overall candidate list

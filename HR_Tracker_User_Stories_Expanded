@@ -1,0 +1,60 @@
+User Story #1:
+    HR needs to track candidates that they have reached out to on various platforms.
+
+    Completion: List of candidates that need to be contacted is up-to-date and provided to HR
+
+    Alternatives:
+        1: After 3 failed attempts of opening the file, the program exits execution.
+        2: There is no list of candidates needed to be contacted, so no list is provided to HR
+        3: All candidates have been contacted recently, so no list is provided to HR
+
+    Process:
+        - User has a file (in this case, let's assume ".csv") that contains a list of candidates.
+        - User provides the name of the file that contains the list of candidates.
+            - If the file cannot be found, the program will prompt the user to try again.
+            - If this is the third time the file failed to open, the program will exit execution.
+        - The program opens the file and stores the information of each candidate, such as name, date last contacted, and platform, into a list.
+        - The user selects the option to get a new file for candidates that need to be contacted.
+        - The program goes through the list and does the following for each candidate in the list:.
+            - If the candidate's last date of contact exceeds or is equal to 3 days when compared to the current day.
+            - The candidate will be added to a new list of candidates that need to be contacted.
+            - The candidate's last date of contact will be updated to the current date.
+        - One of the following will happen:
+            - If the list of candidates that need to be contacted is not empty:
+                - The program takes the list of candidates that need to be contacted and sorts the candidates by platform, with subsorts by name.
+                - The program will write to a new file titled "Contact_List_##-##-####", where ##-##-#### is the current day.
+                - The program will update the file the user provided in the beginning by writing to the file the updated list of all candidates.
+            - Else, the program will print to the user that there is no contact list
+        - The program will close the file, delete both lists and end its execution.
+
+User Story #2 (Can be done within the file too, but like a bonus story):
+    HR needs to remove candidates that do not want to be contacted anymore
+
+    Completion: Selected candidates were removed from the contact list
+
+    Alternatives:
+        1: After 3 failed attempts of opening the file, the program exits execution.
+        2: candidate was/candidates were not found, so the contact list remains the same
+        3: The contact list is empty, so there is no need to remove a candidate from the list
+
+    Process:
+        - User has a file (in this case, let's assume ".csv") that contains a list of candidates.
+        - User provides the name fo the file that contains the list of candidates.
+            - If the file cannot be found, the program will prompt the user to try again.
+            - If this is the third time the file failed to open, the program will exit execution.
+        - The program opens the file and stores the information of each candidate, such as name, date last contacted, and platfomr, into a list.
+        - The user selects the option to remove candidates that do not want to be contacted.
+        - The program will check the list to make sure it is not empty. If it is empty, the program will exit with an error message.
+        - The program prompts the user for the name and platform of the candidate.
+        - Once the name and platform of the candidate have been received, the program will attempt to search for the candidate in the list with one of the possible outcomes:
+            - If the candidate is found, the candidate is removed from the list
+            - If the candidate is not found, the list remains the same
+        - The program will check to see if the list is empty. One of the possible outcomes occurs:
+            - If the list is empty:
+                - The program will print to the screen that the list of candidates is empty
+                - The file that was given (as all candidates have been removed) will be cleared
+            - If the list is not empty:
+                - The program will prompt the user if they would like to remove any more candidates:
+                    - If so, the removal process repeats
+                    - If not, the program will save the new list to the file that was given.
+        - The program will close the file, delete the list and end its execution.
