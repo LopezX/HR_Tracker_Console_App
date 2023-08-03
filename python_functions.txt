@@ -1,0 +1,20 @@
+def create_candidate_entry(information_needed):
+    #collect user input
+    #connect to database
+    #store user input with identifier
+
+def read_candidate_entry(candidate_indentifier):
+    #connect to database
+    #select candidate based on identifier
+    #return query results
+
+def update_candidate_entry(information_needed):
+    #connect to database
+    #select candidate based on identifier
+    #update the candidate's information with the information_needed
+    #return the candidate back to the query
+
+def delete_candidate_entry():
+    #connect to database
+    #select candidate based on identifier
+    #remove candidate from the database
